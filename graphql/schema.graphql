@@ -1,11 +1,15 @@
 type Movie {
-    id: Int!
-    title: String!
-    score: Int!
-    author: String
+	id: Int!
+	title: String!
+	rating: Float!
+	summary: String!
+	language: String!
+	medium_cover_image: String!
 }
 
+"""
+데이터를 단순 불러올 때 query
+"""
 type Query {
-    movies: [Movie]!
-    movie(id: Int!): Movie
+	movies: [Movie]!
 }

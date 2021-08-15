@@ -1,4 +1,4 @@
-import { movies, getById, getMovies, deleteMovie } from "./db";
+import { getMovies } from "./db";
 
 /*
 graphql이란 무엇인가?
@@ -9,10 +9,9 @@ query(질문, operation?) 에 대한 resolve(해결)
 실제 데이터베이스에 접근하는 건 당연히 가능하고, api에 접근하는 것도 가능함.
 */
 const resolvers = {
-    Query: {
-        movies: () => movies,
-        movie: (_, { id }) => getById(id),
-    },
+	Query: {
+		movies: () => getMovies(),
+	},
 };
 
 export default resolvers;
