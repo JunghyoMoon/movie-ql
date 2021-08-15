@@ -1,10 +1,4 @@
-import { people, getById } from "./db";
-
-const Moon = {
-    name: "junghyo",
-    age: 27,
-    gender: "male",
-};
+import { movies, getById, getMovies, deleteMovie } from "./db";
 
 /*
 graphql이란 무엇인가?
@@ -16,8 +10,8 @@ query(질문, operation?) 에 대한 resolve(해결)
 */
 const resolvers = {
     Query: {
-        people: () => people,
-        person: (_, { id }) => getById(id),
+        movies: () => movies,
+        movie: (_, { id }) => getById(id),
     },
 };
 
