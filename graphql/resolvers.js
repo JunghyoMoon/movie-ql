@@ -1,4 +1,4 @@
-import { getMovies } from "./db";
+import { getMovie, getMovies, getSuggestions } from "./db";
 
 /*
 graphql이란 무엇인가?
@@ -10,7 +10,9 @@ query(질문, operation?) 에 대한 resolve(해결)
 */
 const resolvers = {
 	Query: {
-		movies: () => getMovies(),
+		movies: (_, { limit, rating }) => getMovies(limit, rating),
+		movie: (_, { id }) => getMovie(id),
+		suggestions: (_, { id }) => getSuggestions(id),
 	},
 };
 

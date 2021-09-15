@@ -7,8 +7,8 @@
         "start": "nodemon --exec babel-node index.js"
     },
     "dependencies": {
+        "axios": "^0.21.4",
         "graphql-yoga": "^1.18.3",
-        "node-fetch": "^2.6.1",
         "nodemon": "^2.0.12"
     },
     "devDependencies": {

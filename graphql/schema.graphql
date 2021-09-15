@@ -11,5 +11,7 @@ type Movie {
 데이터를 단순 불러올 때 query
 """
 type Query {
-	movies: [Movie]!
+	movies(limit: Int, rating: Float): [Movie]!
+	movie(id: Int!): Movie!
+	suggestions(id: Int!): [Movie]!
 }
