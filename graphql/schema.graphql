@@ -5,7 +5,9 @@ type Movie {
     summary: String
     description_intro: String
     language: String!
+    small_cover_image: String!
     medium_cover_image: String!
+    large_cover_image: String!
 }
 
 """
